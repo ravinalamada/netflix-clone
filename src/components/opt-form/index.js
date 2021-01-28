@@ -1,26 +1,23 @@
 import React from 'react';
-// import {} from './styles';
-import { Container, Input, Text, Button } from './styles/opt-form';
+import { Container, Button, Input, Text } from './styles/opt-form';
 
-export default function OptForm({children, ...restProps}) {
-  return (
-    <Container {...restProps}>
-      {children}
-    </Container>
-  )
+export default function OptForm({ children, ...restProps }) {
+	return <Container {...restProps}>{children}</Container>;
 }
 
-OptForm.Input = function OptFormInput({children, ...restProps}) {
-  return <Input {...restProps}/>
-}
+OptForm.Input = function OptFormInput({ children, ...restProps }) {
+	return <Input {...restProps}>{children}</Input>;
+};
 
-OptForm.Button = function OptFormButton({children, ...restProps}) {
-  return <Button {...restProps}>
-    {children}
-    <img src="/images/icons/chevron-right.png" alt="Try Now"></img>
-  </Button>
-}
+OptForm.Button = function OptFormButton({ children, ...restProps }) {
+	return (
+		<Button {...restProps}>
+			{children}
+			<img src="/images/icons/chevron-right.png" alt="Try now" />
+		</Button>
+	);
+};
 
-OptForm.Text = function OptFormText({children, ...restProps}) {
-  return <Text {...restProps}>{children}</Text>
-}
+OptForm.Text = function OptFormText({ children, ...restProps }) {
+	return <Text {...restProps}>{children}</Text>;
+};
